@@ -232,11 +232,13 @@ button:focus {
   white-space: nowrap;
   color: #ED3783;
   width: fit-content;
+  pointer-events: auto; 
+  user-select: text; 
 }
 
 .info .name {
   text-transform: uppercase;
-  margin-top: 60px
+  margin-top: 160px
 }
 
 .info div {
@@ -377,18 +379,23 @@ button:focus {
 
 @media only screen and (max-width: 500px) and (max-height: 790px)
 {
-
   .info div {
-    margin: 75% 0;
+    margin: 90% 0;
   }
 
   .info .description {
     font-size: 12px;
     display: inline-block;
-    max-width: 300px;
+    max-width: 200px;
     word-wrap: break-word;
     white-space: normal;
     text-align: start;
     margin-bottom: 70px;
   }
+
+  .info .name {
+    text-transform: uppercase;
+    margin-top: 200px
+  }
 }
+
