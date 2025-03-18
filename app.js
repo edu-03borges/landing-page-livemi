@@ -100,3 +100,68 @@ document.getElementById('link-contact').addEventListener('click', (event) => {
   event.preventDefault();
   changePage('contact-page');
 });
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  function checkTextContent() {
+    const currentInfoText = document.querySelector('.current--info .text.name').textContent.trim();
+
+    if (currentInfoText === 'Geometria') {
+      console.log('Ação para Geometria');
+
+    } else if (currentInfoText === 'Álgebra') {
+      console.log('Ação para Álgebra');
+
+    } else if (currentInfoText === 'Aritmética') {
+      console.log('Ação para Aritmética');
+
+    } else {
+      console.log('Texto não reconhecido');
+    }
+  }
+
+  const checkOpacityButton = document.querySelector('.button-container');
+  checkOpacityButton.addEventListener('click', () => {
+    checkTextContent();
+  });
+});
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  function changeButtonText() {
+    const currentInfoText = document.querySelector('.current--info .text.name').textContent.trim();
+    const button = document.querySelector('.button-container');  
+
+    console.log(`Texto atual: ${currentInfoText}`); 
+
+    button.classList.remove('fade-out', 'fade-in');
+
+    button.classList.add('fade-out');
+
+    setTimeout(() => {
+      if (currentInfoText === 'Geometria') {
+        button.textContent = 'BAIXAR PDF DE GEOMETRIA';
+      } else if (currentInfoText === 'Álgebra') {
+        button.textContent = 'BAIXAR PDF DE ÁLGEBRA';
+      } else if (currentInfoText === 'Aritmética') {
+        button.textContent = 'BAIXAR PDF DE ARITMÉTICA';
+      } else {
+        button.textContent = 'BAIXAR PDF';
+      }
+
+      button.classList.remove('fade-out');
+      button.classList.add('fade-in');
+    }, 500);
+  }
+
+  const leftButton = document.querySelector('.btn--left');
+  const rightButton = document.querySelector('.btn--right');
+
+  leftButton.addEventListener('click', changeButtonText);  
+  rightButton.addEventListener('click', changeButtonText); 
+});
+
+
+
+
+
+
+

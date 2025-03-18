@@ -262,13 +262,22 @@ header .container {
   justify-content: center;
   align-items: center;
   background-color: #07C693;
-  width: 200px;
+  width: 350px;
   color: white;
   border-radius: 7px;
   padding: 10px;
   font-family: "Montserrat";
   font-size: 1rem;
   white-space: nowrap;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;  
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;  
 }
 
 .button-container:hover {
@@ -817,5 +826,23 @@ header .container {
 
   .showcase-area .btn {
     font-size: 0.8rem;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
