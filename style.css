@@ -262,7 +262,7 @@ header .container {
   justify-content: center;
   align-items: center;
   background-color: #07C693;
-  width: 350px;
+  width: 250px;
   color: white;
   border-radius: 7px;
   padding: 10px;
@@ -272,13 +272,13 @@ header .container {
   transition: opacity 0.5s ease-in-out;
 }
 
-.fade-out {
+/* .fade-out {
   animation: fadeOut 0.5s forwards;  
-}
+} */
 
-.fade-in {
+/* .fade-in {
   animation: fadeIn 0.5s forwards;  
-}
+} */
 
 .button-container:hover {
   background-color: #05AF7A;
@@ -829,7 +829,7 @@ header .container {
   }
 }
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -845,4 +845,4 @@ header .container {
   100% {
     opacity: 1;
   }
-}
+} */
