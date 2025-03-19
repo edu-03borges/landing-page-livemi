@@ -101,6 +101,7 @@ document.getElementById('link-contact').addEventListener('click', (event) => {
   changePage('contact-page');
 });
 
+// 
 // window.addEventListener('DOMContentLoaded', (event) => {
 //   function checkTextContent() {
 //     const currentInfoText = document.querySelector('.current--info .text.name').textContent.trim();
