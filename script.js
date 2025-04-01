@@ -80,14 +80,14 @@ function changeInfo(direction) {
 
 	gsap.timeline()
 		.to([buttons.prev, buttons.next], {
-		duration: 0.2,
+		duration: 0,
 		opacity: 0.5,
 		pointerEvents: "none",
 	})
 		.to(
 		currentInfoEl.querySelectorAll(".text"),
 		{
-			duration: 0.4,
+			duration: 0.2,
 			stagger: 0.1,
 			translateY: "-120px",
 			opacity: 0,
@@ -107,7 +107,7 @@ function changeInfo(direction) {
 			translateY: "40px",
 		},
 		{
-			duration: 0.4,
+			duration: 0.2,
 			stagger: 0.1,
 			translateY: "0px",
 			opacity: 1,
@@ -194,7 +194,7 @@ function init() {
 	})
 		.to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
 		delay: 0.5,
-		duration: 0.4,
+		duration: 0.2,
 		stagger: 0.1,
 		opacity: 1,
 		translateY: 0,
@@ -202,7 +202,7 @@ function init() {
 		.to(
 		[buttons.prev, buttons.next],
 		{
-			duration: 0.4,
+			duration: 0.2,
 			opacity: 1,
 			pointerEvents: "all",
 		},
@@ -235,7 +235,7 @@ const waitForImages = () => {
 				let loadProgress = loadedImages / totalImages;
 
 				gsap.to(loaderEl, {
-					duration: 1,
+					duration: 0.2,
 					scaleX: loadProgress,
 					backgroundColor: `hsl(${loadProgress * 120}, 100%, 50%`,
 				});
@@ -243,7 +243,7 @@ const waitForImages = () => {
 				if (totalImages == loadedImages) {
 					gsap.timeline()
 						.to(".loading__wrapper", {
-						duration: 0.8,
+						duration: 0.1,
 						opacity: 0,
 						pointerEvents: "none",
 					})
