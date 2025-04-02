@@ -101,6 +101,11 @@ document.getElementById('link-contact').addEventListener('click', (event) => {
   changePage('contact-page');
 });
 
+
+document.getElementById('button-ebook-main').addEventListener('click', (event) => {
+  event.preventDefault();
+  changePage('product-page');
+});
 // 
 // window.addEventListener('DOMContentLoaded', (event) => {
 //   function checkTextContent() {
