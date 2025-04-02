@@ -459,19 +459,23 @@
   <!-- JavaScript Vanilla -->
 
   <script>
-    document.querySelector('.app-stores').addEventListener('click', function() {
-      gtag('event', 'download_pdf_click', {
-        'event_category': 'Botão Baixar PDF',
-        'event_label': 'Baixar PDF',
-        'value': 1
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.app-stores').addEventListener('click', function() {
+        gtag('event', 'download_pdf_click', {
+          'event_category': 'Botão Baixar PDF',
+          'event_label': 'Baixar PDF',
+          'value': 1
+        });
       });
-    });
 
-    document.querySelector('.app-stores-2').addEventListener('click', function() {
-      gtag('event', 'download_pdf_click_checkout', {
-        'event_category': 'Botão Baixar PDF Chekout',
-        'event_label': 'Baixar PDF Chekout',
-        'value': 2
+      document.querySelectorAll('.app-stores-2').forEach(div => {
+        div.addEventListener('click', function() {
+          gtag('event', 'download_pdf_click_checkout', {
+            'event_category': 'Botão Baixar PDF Checkout',
+            'event_label': 'Baixar PDF Checkout',
+            'value': 2
+          });
+        });
       });
     });
   </script>
